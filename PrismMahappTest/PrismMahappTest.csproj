@@ -100,6 +100,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -127,6 +128,10 @@
     <ProjectReference Include="..\PrismMahappTest.ModuleB\PrismMahappTest.ModuleB.csproj">
       <Project>{f741a1bf-0cf0-43bb-94b5-3df08dafc2a4}</Project>
       <Name>PrismMahappTest.ModuleB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PrismMahappTest.Organizer\PrismMahappTest.Organizer.csproj">
+      <Project>{e7410612-6c56-43a6-beec-644a338c2769}</Project>
+      <Name>PrismMahappTest.Organizer</Name>
     </ProjectReference>
     <ProjectReference Include="..\PrismMahappTest.Styling\PrismMahappTest.Styling.csproj">
       <Project>{66e3b7cb-80a6-4942-9874-98b4c50b64b2}</Project>

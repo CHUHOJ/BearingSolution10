@@ -22,6 +22,7 @@ namespace PrismMahappTest.Views
                 SetRegionManager(regionManager, this.leftWindowsCommandRegion, RegionNames.LeftWindowCommandsRegions);
                 SetRegionManager(regionManager, this.rightWindowsCommandRegion, RegionNames.RightWindowCommandsRegions);
                 SetRegionManager(regionManager, this.flyoutsControlRegion, RegionNames.FlyoutRegion);
+                //SetRegionManager(regionManager, this.metroWindow, RegionNames.MetroWindow);
             }
 
             regionManager.RegisterViewWithRegion(RegionNames.RightWindowCommandsRegions, typeof(RightTitlebarCommands));

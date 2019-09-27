@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismMahappTest.Infrastruct
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismMahappTest.Styling", "PrismMahappTest.Styling\PrismMahappTest.Styling.csproj", "{66E3B7CB-80A6-4942-9874-98B4C50B64B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismMahappTest.Organizer", "PrismMahappTest.Organizer\PrismMahappTest.Organizer.csproj", "{E7410612-6C56-43A6-BEEC-644A338C2769}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{66E3B7CB-80A6-4942-9874-98B4C50B64B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66E3B7CB-80A6-4942-9874-98B4C50B64B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66E3B7CB-80A6-4942-9874-98B4C50B64B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7410612-6C56-43A6-BEEC-644A338C2769}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7410612-6C56-43A6-BEEC-644A338C2769}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7410612-6C56-43A6-BEEC-644A338C2769}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7410612-6C56-43A6-BEEC-644A338C2769}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 		{F741A1BF-0CF0-43BB-94B5-3DF08DAFC2A4} = {409AAFE5-0F10-44F5-B23C-E49C37B826D7}
 		{41AE0793-22F0-482E-B6FE-831C939EA154} = {E615B0E9-602F-4BCB-9C83-E85A29FD3639}
 		{66E3B7CB-80A6-4942-9874-98B4C50B64B2} = {E615B0E9-602F-4BCB-9C83-E85A29FD3639}
+		{E7410612-6C56-43A6-BEEC-644A338C2769} = {409AAFE5-0F10-44F5-B23C-E49C37B826D7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {584B896E-0528-480C-A1E4-7714CC9CB4CB}

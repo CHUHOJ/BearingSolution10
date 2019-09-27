@@ -7,6 +7,9 @@ using PrismMahappTest.Infrastructure.Constants;
 using PrismMahappTest.Infrastructure.Services;
 using PrismMahappTest.Infrastructure;
 using static PrismMahappTest.Infrastructure.ApplicationCommands;
+using PrismMahappTest.Organizer;
+using PrismMahappTest.ModuleA;
+using PrismMahappTest.ModuleB;
 
 namespace PrismMahappTest
 {
@@ -23,17 +26,17 @@ namespace PrismMahappTest
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
-
             containerRegistry.Register<IApplicationCommands, ApplicationCommandsProxy>();
             containerRegistry.RegisterInstance<IFlyoutService>(Container.Resolve<FlyoutService>());
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
-            moduleCatalog.AddModule(typeof(ModuleA.ModuleAModule));
-            // Register ModuleB
-            moduleCatalog.AddModule(typeof(ModuleB.ModuleBModule));
+            //moduleCatalog.AddModule(typeof(ModuleAModule));
+            //// Register ModuleB
+            //moduleCatalog.AddModule(typeof(ModuleBModule));
+
+            moduleCatalog.AddModule(typeof(OrganizerModule));
         }
     }
 }

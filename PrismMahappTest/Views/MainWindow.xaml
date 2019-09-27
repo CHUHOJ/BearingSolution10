@@ -1,4 +1,4 @@
-﻿<metro:MetroWindow x:Class="PrismMahappTest.Views.MainWindow"
+﻿<metro:MetroWindow x:Class="PrismMahappTest.Views.MainWindow" 
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:prism="http://prismlibrary.com/"
@@ -21,6 +21,7 @@
     <metro:MetroWindow.Flyouts>
         <metro:FlyoutsControl x:Name="flyoutsControlRegion" />
     </metro:MetroWindow.Flyouts>
+    
 
 
         
