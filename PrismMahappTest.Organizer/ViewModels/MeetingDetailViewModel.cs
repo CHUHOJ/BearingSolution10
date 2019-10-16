@@ -206,10 +206,19 @@ namespace PrismMahappTest.Organizer.ViewModels
         {
             if (args.ViewModelName == nameof(PersonDetailViewModel))
             {
-                await _meetingRepository.ReloadPersonAsync(args.Id);
-                _allPersons = await _meetingRepository.GetAllPersonsAsync();
+                try
+                {
+                        await _meetingRepository.ReloadPersonAsync(args.Id);
 
-                SetupPicklist();
+                    _allPersons = await _meetingRepository.GetAllPersonsAsync();
+
+                    SetupPicklist();
+                }
+                catch (Exception)
+                {
+                    await MessageDialogService.ShowInfoDialogAsync($"Error occur. Please try again.");
+                }
+
             }
         }
 

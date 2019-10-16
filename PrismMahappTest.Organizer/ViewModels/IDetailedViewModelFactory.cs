@@ -17,22 +17,15 @@ namespace PrismMahappTest.Organizer.ViewModels
 
     public class DetailViewModelFactory : IDetailedViewModelFactory
     {
-        IEventAggregator eventAggregator;
-        IMessageDialogService messageDialogService;
-        IProgrammingLanguageRepository programmingLanguageRepository;
-        IPersonRepository personRepository;
-        IMeetingRepository meetingRepository;
-        IProgrammingLanguageDataService programmingLanguageDataService;
-        public DetailViewModelFactory(IEventAggregator eventAggregator,
-            IMessageDialogService messageDialogService,IProgrammingLanguageRepository programmingLanguageRepository, 
-            IPersonRepository personRepository, IMeetingRepository meetingRepository, IProgrammingLanguageDataService programmingLanguageDataService)
+        Func<ProgrammingLanguageDetailViewModel> _programLanguageDetailVMCreator;
+        Func<PersonDetailViewModel> _personDetailVMCreator;
+        Func<MeetingDetailViewModel> _meetingDetailVMCreator;
+
+        public DetailViewModelFactory(Func<ProgrammingLanguageDetailViewModel> programLanguageDetailVMCreator, Func<PersonDetailViewModel> personDetailVMCreator, Func<MeetingDetailViewModel> meetingDetailVMCreator)
         {
-            this.eventAggregator = eventAggregator;
-            this.messageDialogService = messageDialogService;
-            this.programmingLanguageRepository = programmingLanguageRepository;
-            this.personRepository = personRepository;
-            this.meetingRepository = meetingRepository;
-            this.programmingLanguageDataService = programmingLanguageDataService;
+            _programLanguageDetailVMCreator=programLanguageDetailVMCreator;
+            _personDetailVMCreator=personDetailVMCreator;
+            _meetingDetailVMCreator=meetingDetailVMCreator;
         }
         public IDetailViewModel GetDetailViewModel(string viewModelName)
         {
@@ -41,13 +34,13 @@ namespace PrismMahappTest.Organizer.ViewModels
             {
 
                 case nameof(ProgrammingLanguageDetailViewModel):
-                    vm = new ProgrammingLanguageDetailViewModel(eventAggregator, messageDialogService, programmingLanguageRepository);
+                    vm = _programLanguageDetailVMCreator();
                     break;
                 case nameof(PersonDetailViewModel):
-                    vm = new PersonDetailViewModel(personRepository, eventAggregator, messageDialogService, programmingLanguageDataService);
+                    vm = _personDetailVMCreator();
                     break;
                 case nameof(MeetingDetailViewModel):
-                    vm = new MeetingDetailViewModel(eventAggregator, messageDialogService, meetingRepository);
+                    vm = _meetingDetailVMCreator();
                     break;
                 default:
                     vm = null;

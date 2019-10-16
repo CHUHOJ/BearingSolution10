@@ -8,7 +8,7 @@ using PrismMahappTest.Organizer.Data.Repositories;
 using PrismMahappTest.Organizer.ViewModels;
 using PrismMahappTest.Infrastructure.Services;
 using PrismMahappTest.Infrastructure.Constants;
-using MahApps.Metro.Controls.Dialogs;
+
 
 namespace PrismMahappTest.Organizer
 {
@@ -18,10 +18,13 @@ namespace PrismMahappTest.Organizer
         {
             var regionManager = containerProvider.Resolve<IRegionManager>();
             regionManager.RegisterViewWithRegion(RegionNames.MainRegion, typeof(OrganizerMainView));
+
+            
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            
             containerRegistry.Register<OrganizerDbContext>();
             containerRegistry.Register<IMessageDialogService, MessageDialogService>();
             containerRegistry.Register<IDetailedViewModelFactory, DetailViewModelFactory>();
@@ -32,7 +35,7 @@ namespace PrismMahappTest.Organizer
             containerRegistry.Register<IPersonRepository, PersonRepository>();
             containerRegistry.Register<INavigationViewModel, NavigationViewModel>();
             containerRegistry.Register<IProgrammingLanguageRepository, ProgrammingLanguageRepository>();
-            containerRegistry.RegisterInstance<IDialogCoordinator>(DialogCoordinator.Instance);
+
         }
     }
 }

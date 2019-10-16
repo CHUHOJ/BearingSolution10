@@ -20,8 +20,8 @@ namespace PrismMahappTest.ModuleA
             regionManager.RegisterViewWithRegion(RegionNames.FlyoutRegion, typeof(C2Flyout));
 
             // Tiles
-            regionManager.RegisterViewWithRegion(RegionNames.MainRegion, typeof(HomeTiles));
-            regionManager.RegisterViewWithRegion(RegionNames.MainRegion, typeof(HomeTiles));
+            //regionManager.RegisterViewWithRegion(RegionNames.MainRegion, typeof(HomeTiles));
+            //regionManager.RegisterViewWithRegion(RegionNames.MainRegion, typeof(HomeTiles));
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)

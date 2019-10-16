@@ -5,7 +5,7 @@
         xmlns:infConstants="clr-namespace:PrismMahappTest.Infrastructure.Constants;assembly=PrismMahappTest.Infrastructure"
         xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
         prism:ViewModelLocator.AutoWireViewModel="True"
-        Title="{Binding Title}" Height="350" Width="525">
+        Title="{Binding Title}" Height="800" Width="1000">
 
     <!-- Left-Windows Commands -->
     <metro:MetroWindow.LeftWindowCommands>
@@ -14,7 +14,7 @@
 
     <!-- Right-Windows Commands -->
     <metro:MetroWindow.RightWindowCommands>
-        <metro:WindowCommands x:Name="rightWindowsCommandRegion" prism:RegionManager.RegionName="RightWindowCommandsRegions" />
+        <metro:WindowCommands prism:RegionManager.RegionName="{x:Static infConstants:RegionNames.RightWindowCommandsRegions}" />
     </metro:MetroWindow.RightWindowCommands>
 
     <!-- Flyouts -->
@@ -25,7 +25,7 @@
 
 
         
-        <Grid>
-        <ItemsControl prism:RegionManager.RegionName="{x:Static infConstants:RegionNames.MainRegion}" />
+        <Grid >
+        <ContentControl prism:RegionManager.RegionName="{x:Static infConstants:RegionNames.MainRegion}" />
     </Grid>
 </metro:MetroWindow>

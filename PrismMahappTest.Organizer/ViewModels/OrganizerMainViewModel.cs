@@ -24,8 +24,6 @@ namespace PrismMahappTest.Organizer.ViewModels
         public ICommand OpenSingleDetailViewCommand { get; }
         public INavigationViewModel NavigationViewModel { get; }
 
-
-
         private IDetailViewModel _selectedDetailViewModel;
         public IDetailViewModel SelectedDetailViewModel
         {
@@ -88,8 +86,10 @@ namespace PrismMahappTest.Organizer.ViewModels
                 }
                 DetailViewModels.Add(detailViewModel);
 
-                SelectedDetailViewModel = detailViewModel;
+                
             }
+
+            SelectedDetailViewModel = detailViewModel;
         }
 
         private int nextNewItemId = 0;

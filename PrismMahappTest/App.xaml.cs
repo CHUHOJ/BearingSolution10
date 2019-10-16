@@ -10,6 +10,7 @@ using static PrismMahappTest.Infrastructure.ApplicationCommands;
 using PrismMahappTest.Organizer;
 using PrismMahappTest.ModuleA;
 using PrismMahappTest.ModuleB;
+using System;
 
 namespace PrismMahappTest
 {
@@ -28,15 +29,25 @@ namespace PrismMahappTest
         {
             containerRegistry.Register<IApplicationCommands, ApplicationCommandsProxy>();
             containerRegistry.RegisterInstance<IFlyoutService>(Container.Resolve<FlyoutService>());
+            
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
-            //moduleCatalog.AddModule(typeof(ModuleAModule));
+            moduleCatalog.AddModule(typeof(ModuleAModule));
             //// Register ModuleB
             //moduleCatalog.AddModule(typeof(ModuleBModule));
 
             moduleCatalog.AddModule(typeof(OrganizerModule));
+        }
+
+        private void Application_DispatcherUnhandledException(object sender,
+        System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+        {
+            MessageBox.Show("Unexpected error occured:" +
+                Environment.NewLine + e.Exception.Message, "Unexpected error");
+
+            e.Handled = true;
         }
     }
 }

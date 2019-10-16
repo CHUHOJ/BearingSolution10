@@ -20,12 +20,12 @@ namespace PrismMahappTest.Views
             if (regionManager != null)
             {
                 SetRegionManager(regionManager, this.leftWindowsCommandRegion, RegionNames.LeftWindowCommandsRegions);
-                SetRegionManager(regionManager, this.rightWindowsCommandRegion, RegionNames.RightWindowCommandsRegions);
+                //SetRegionManager(regionManager, this.rightWindowsCommandRegion, RegionNames.RightWindowCommandsRegions);
                 SetRegionManager(regionManager, this.flyoutsControlRegion, RegionNames.FlyoutRegion);
                 //SetRegionManager(regionManager, this.metroWindow, RegionNames.MetroWindow);
             }
 
-            regionManager.RegisterViewWithRegion(RegionNames.RightWindowCommandsRegions, typeof(RightTitlebarCommands));
+            //regionManager.RegisterViewWithRegion(RegionNames.RightWindowCommandsRegions, typeof(RightTitlebarCommands));
         }
 
         void SetRegionManager(IRegionManager regionManager, DependencyObject regionTarget, string regionName)

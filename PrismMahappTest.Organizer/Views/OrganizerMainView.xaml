@@ -25,7 +25,7 @@
             <ColumnDefinition Width="250"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Menu Grid.ColumnSpan="2" FontSize="20">
+        <Menu Grid.ColumnSpan="2" FontSize="14">
             <MenuItem Header="Create">
                 <MenuItem Header="New Person" Command="{Binding CreateNewDetailCommand}" 
                           CommandParameter="{x:Type viewModel:PersonDetailViewModel}"/>
@@ -39,7 +39,7 @@
         </Menu>
         <view:NavigationView Grid.Row="1"
                              DataContext="{Binding NavigationViewModel}"/>
-        <TabControl Grid.Row="1" MinWidth="500"
+        <!--<TabControl Grid.Row="1" MinWidth="500"
                     Grid.Column="1"
                     ItemsSource="{Binding DetailViewModels}"
                     SelectedItem="{Binding SelectedDetailViewModel, Mode=TwoWay}">
@@ -64,6 +64,13 @@
                     </StackPanel>
                 </DataTemplate>
             </TabControl.ItemTemplate>
-        </TabControl>
+        </TabControl>-->
+        <Border Grid.Row="1" MinWidth="500" Margin="10" BorderBrush="{DynamicResource AccentColorBrush}" BorderThickness="1"
+                    Grid.Column="1">
+            <ContentControl Content="{Binding SelectedDetailViewModel, Mode=TwoWay}">
+                
+            </ContentControl>
+            
+        </Border>
     </Grid>
 </UserControl>
