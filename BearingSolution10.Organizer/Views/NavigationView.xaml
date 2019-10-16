@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="BearingSolution10.Organizer.Views.NavigationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/" 
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <UserControl.Resources>
+        <Style x:Key="NaviItemContainerStyle" TargetType="ContentPresenter">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="2"/>
+        </Style>
+
+        <DataTemplate x:Key="NaviItemTemplate">
+            <Button Content="{Binding DisplayMember}"
+                    Command="{Binding OpenDetailViewCommand}"
+                    FontSize="16" Style="{StaticResource MaterialDesignFlatButton}">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid >
+                            <ContentPresenter/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Cursor" Value="Hand"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="FontWeight" Value="Normal"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="Persons" Margin="10" Style="{DynamicResource MaterialDesignCardGroupBox}">
+            <ScrollViewer VerticalScrollBarVisibility="Auto"
+                          HorizontalScrollBarVisibility="Auto">
+                <ItemsControl ItemsSource="{Binding Persons}"
+                              ItemContainerStyle="{StaticResource NaviItemContainerStyle}"
+                              ItemTemplate="{StaticResource NaviItemTemplate}"
+                              Margin="10 0 10 5"/>
+
+            </ScrollViewer>
+        </GroupBox>
+        <GroupBox Header="Meetings" Margin="10" Grid.Row="1" Style="{DynamicResource MaterialDesignCardGroupBox}">
+            <ScrollViewer VerticalScrollBarVisibility="Auto"
+                      HorizontalScrollBarVisibility="Auto">
+                <ItemsControl ItemsSource="{Binding Meetings}"
+                              ItemContainerStyle="{StaticResource NaviItemContainerStyle}"
+                              ItemTemplate="{StaticResource NaviItemTemplate}"
+                              Margin="10 0 10 5"/>
+            </ScrollViewer>
+        </GroupBox>
+    </Grid>
+</UserControl>

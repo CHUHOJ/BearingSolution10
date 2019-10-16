@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E7410612-6C56-43A6-BEEC-644A338C2769}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PrismMahappTest.Organizer</RootNamespace>
+    <AssemblyName>PrismMahappTest.Organizer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Lookups\IMeetingLookupDataService.cs" />
+    <Compile Include="Data\Lookups\IPersonLookupDataService.cs" />
+    <Compile Include="Data\Lookups\IProgrammingLanguageDataService.cs" />
+    <Compile Include="Data\Lookups\LookupDataService.cs" />
+    <Compile Include="Data\OrganizerDbContext.cs" />
+    <Compile Include="Data\Repositories\IMeetingRepository.cs" />
+    <Compile Include="Data\Repositories\IPersonRepository.cs" />
+    <Compile Include="Data\Repositories\IProgrammingLanguageRepository.cs" />
+    <Compile Include="Data\Repositories\MeetingRepository.cs" />
+    <Compile Include="Data\Repositories\PersonRepository.cs" />
+    <Compile Include="Data\Repositories\ProgrammingLanguageRepository.cs" />
+    <Compile Include="Event\OpenDetailViewEvent.cs" />
+    <Compile Include="Event\AfterDetailSavedEvent.cs" />
+    <Compile Include="Event\AfterDetailDeletedEvent.cs" />
+    <Compile Include="Event\AfterDetailClosedEvent.cs" />
+    <Compile Include="Event\AfterCollectionSavedEvent.cs" />
+    <Compile Include="Model\LookupItem.cs" />
+    <Compile Include="Model\Meeting.cs" />
+    <Compile Include="Model\NullLookupItem.cs" />
+    <Compile Include="Model\Person.cs" />
+    <Compile Include="Model\PersonPhoneNumber.cs" />
+    <Compile Include="Model\ProgrammingLanguage.cs" />
+    <Compile Include="OrganizerModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ViewModels\DetailViewModelBase.cs" />
+    <Compile Include="ViewModels\IDetailedViewModelFactory.cs" />
+    <Compile Include="ViewModels\IMeetingDetailViewModel.cs" />
+    <Compile Include="ViewModels\INavigationViewModel.cs" />
+    <Compile Include="ViewModels\IDetailViewModel.cs" />
+    <Compile Include="ViewModels\OrganizerMainViewModel.cs" />
+    <Compile Include="ViewModels\NavigationItemViewModel.cs" />
+    <Compile Include="ViewModels\NavigationViewModel.cs" />
+    <Compile Include="ViewModels\ProgrammingLanguageDetailViewModel.cs" />
+    <Compile Include="ViewModels\PersonDetailViewModel.cs" />
+    <Compile Include="ViewModels\MeetingDetailViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="ViewModels\Wrapper\ProgrammingLanguageWrapper.cs" />
+    <Compile Include="ViewModels\Wrapper\PersonPhoneNumberWrapper.cs" />
+    <Compile Include="ViewModels\Wrapper\PersonWrapper.cs" />
+    <Compile Include="ViewModels\Wrapper\MeetingWrapper.cs" />
+    <Compile Include="Views\MeetingDetailView.xaml.cs">
+      <DependentUpon>MeetingDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NavigationView.xaml.cs">
+      <DependentUpon>NavigationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrganizerMainView.xaml.cs">
+      <DependentUpon>OrganizerMainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PersonDetailView.xaml.cs">
+      <DependentUpon>PersonDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProgrammingLanguageDetailView.xaml.cs">
+      <DependentUpon>ProgrammingLanguageDetailView.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <PackageReference Include="EntityFramework">
+      <Version>6.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="MaterialDesignThemes">
+      <Version>2.6.0</Version>
+    </PackageReference>
+    <PackageReference Include="MaterialDesignThemes.MahApps">
+      <Version>0.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="Prism.Wpf" Version="7.2.0.1367" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BearingSolution10.Infrastructure\BearingSolution10.Infrastructure.csproj">
+      <Project>{41ae0793-22f0-482e-b6fe-831c939ea154}</Project>
+      <Name>BearingSolution10.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BearingSolution10.Styling\BearingSolution10.Styling.csproj">
+      <Project>{66e3b7cb-80a6-4942-9874-98b4c50b64b2}</Project>
+      <Name>BearingSolution10.Styling</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\MeetingDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NavigationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\OrganizerMainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PersonDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ProgrammingLanguageDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
