@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BearingSolution10.Organizer.Model;
 using BearingSolution10.Organizer.Data;
+using BearingSolution10.Infrastructure.Base;
 using System.Data.Entity;
 
 namespace BearingSolution10.Organizer.Data.Lookups

@@ -35,19 +35,11 @@ namespace BearingSolution10
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
             moduleCatalog.AddModule(typeof(ModuleAModule));
-            //// Register ModuleB
+
             //moduleCatalog.AddModule(typeof(ModuleBModule));
 
             moduleCatalog.AddModule(typeof(OrganizerModule));
         }
 
-        private void Application_DispatcherUnhandledException(object sender,
-        System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
-        {
-            MessageBox.Show("Unexpected error occured:" +
-                Environment.NewLine + e.Exception.Message, "Unexpected error");
-
-            e.Handled = true;
-        }
     }
 }

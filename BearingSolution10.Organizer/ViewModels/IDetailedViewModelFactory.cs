@@ -1,5 +1,6 @@
 ﻿using Prism.Events;
 using BearingSolution10.Infrastructure.Services;
+using BearingSolution10.Infrastructure.Base;
 using BearingSolution10.Organizer.Data.Repositories;
 using BearingSolution10.Organizer.Data.Lookups;
 using System;

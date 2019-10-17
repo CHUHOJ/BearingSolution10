@@ -1,17 +1,18 @@
-﻿using Prism.Commands;
-using Prism.Events;
-using BearingSolution10.Infrastructure.Services;
-using BearingSolution10.Organizer.Data.Repositories;
-using BearingSolution10.Organizer.Event;
-using BearingSolution10.Organizer.Model;
-using BearingSolution10.Organizer.ViewModels.Wrapper;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Prism.Commands;
+using Prism.Events;
+using BearingSolution10.Infrastructure.Services;
+using BearingSolution10.Infrastructure.Event;
+using BearingSolution10.Infrastructure.Base;
+using BearingSolution10.Organizer.Data.Repositories;
+using BearingSolution10.Organizer.Model;
+using BearingSolution10.Organizer.ViewModels.Wrapper;
+
 
 namespace BearingSolution10.Organizer.ViewModels
 {
@@ -85,7 +86,9 @@ namespace BearingSolution10.Organizer.ViewModels
         private void SetupPicklist()
         {
             List<int> meetingPersonIds = Meeting.Model.Persons.Select(p => p.Id).ToList();
+
             var addedPersons = _allPersons.Where(x => meetingPersonIds.Contains(x.Id)).OrderBy(p => p.FirstName);
+
             var availablePersons = _allPersons.Except(addedPersons).OrderBy(p => p.FirstName);
 
             AddedPersons.Clear();

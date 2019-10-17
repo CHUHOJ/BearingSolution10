@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Prism.Events;
 using Prism.Mvvm;
 using BearingSolution10.Organizer.Data.Lookups;
-using BearingSolution10.Organizer.Event;
+using BearingSolution10.Infrastructure.Event;
 
 namespace BearingSolution10.Organizer.ViewModels
 {

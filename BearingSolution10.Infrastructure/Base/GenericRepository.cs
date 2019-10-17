@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
 using System.Threading.Tasks;
-using BearingSolution10.Infrastructure.Interfaces;
+
 
 namespace BearingSolution10.Infrastructure.Base
 {

@@ -1,10 +1,9 @@
-﻿using BearingSolution10.Infrastructure.Base;
-using BearingSolution10.Organizer.Model;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using System.Threading.Tasks;
+using BearingSolution10.Infrastructure.Base;
+using BearingSolution10.Organizer.Model;
+
 namespace BearingSolution10.Organizer.Data.Repositories
 {
     public class PersonRepository : GenericRepository<Person, OrganizerDbContext>, IPersonRepository

@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5A4B454D-759A-4152-A4A8-40AAADD52F66}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BearingSolution10.WorkManager</RootNamespace>
+    <AssemblyName>BearingSolution10.WorkManager</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Lookups\IWorkLookupDataService.cs" />
+    <Compile Include="Data\Lookups\IUserLookupDataService.cs" />
+    <Compile Include="Data\Lookups\IProjectLookupDataService.cs" />
+    <Compile Include="Data\Lookups\IProjectTimeLookupDataService.cs" />
+    <Compile Include="Data\Lookups\IDayOffLookupDataService.cs" />
+    <Compile Include="Data\Lookups\ICustomerLookupDataService.cs" />
+    <Compile Include="Data\Lookups\IAttachmentLookupDataService.cs" />
+    <Compile Include="Data\Lookups\LookupDataService.cs" />
+    <Compile Include="Data\Model\Attachment.cs" />
+    <Compile Include="Data\Model\Customer.cs" />
+    <Compile Include="Data\Model\DayOff.cs" />
+    <Compile Include="Data\Model\Project.cs" />
+    <Compile Include="Data\Model\ProjectTime.cs" />
+    <Compile Include="Data\Model\User.cs" />
+    <Compile Include="Data\Model\Work.cs" />
+    <Compile Include="Data\Repositories\IWorkRepository.cs" />
+    <Compile Include="Data\Repositories\IUserRepository.cs" />
+    <Compile Include="Data\Repositories\IProjectTimeRepository.cs" />
+    <Compile Include="Data\Repositories\IProjectRepository.cs" />
+    <Compile Include="Data\Repositories\IDayOffRepository.cs" />
+    <Compile Include="Data\Repositories\ICustomerRepository.cs" />
+    <Compile Include="Data\Repositories\IAttachmentRepository.cs" />
+    <Compile Include="Data\WorkEntity.cs" />
+    <Compile Include="ViewModels\Wrapper\ProjectTimeWrapper.cs" />
+    <Compile Include="ViewModels\Wrapper\WorkWrapper.cs" />
+    <Compile Include="ViewModels\Wrapper\UserWrapper.cs" />
+    <Compile Include="ViewModels\Wrapper\ProjectWrapper.cs" />
+    <Compile Include="ViewModels\Wrapper\DayOffWrapper.cs" />
+    <Compile Include="ViewModels\Wrapper\CustomerWrapper.cs" />
+    <Compile Include="ViewModels\Wrapper\AttachmentWrapper.cs" />
+    <Compile Include="WorkManagerModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ViewModels\ViewAViewModel.cs" />
+    <Compile Include="Views\ViewA.xaml.cs">
+      <DependentUpon>ViewA.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Event\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\ViewA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EntityFramework">
+      <Version>6.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="Prism.Wpf" Version="7.2.0.1367" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BearingSolution10.Infrastructure\BearingSolution10.Infrastructure.csproj">
+      <Project>{41ae0793-22f0-482e-b6fe-831c939ea154}</Project>
+      <Name>BearingSolution10.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

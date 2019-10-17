@@ -60,14 +60,7 @@
     <Compile Include="Data\Repositories\MeetingRepository.cs" />
     <Compile Include="Data\Repositories\PersonRepository.cs" />
     <Compile Include="Data\Repositories\ProgrammingLanguageRepository.cs" />
-    <Compile Include="Event\OpenDetailViewEvent.cs" />
-    <Compile Include="Event\AfterDetailSavedEvent.cs" />
-    <Compile Include="Event\AfterDetailDeletedEvent.cs" />
-    <Compile Include="Event\AfterDetailClosedEvent.cs" />
-    <Compile Include="Event\AfterCollectionSavedEvent.cs" />
-    <Compile Include="Model\LookupItem.cs" />
     <Compile Include="Model\Meeting.cs" />
-    <Compile Include="Model\NullLookupItem.cs" />
     <Compile Include="Model\Person.cs" />
     <Compile Include="Model\PersonPhoneNumber.cs" />
     <Compile Include="Model\ProgrammingLanguage.cs" />
@@ -85,11 +78,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ViewModels\DetailViewModelBase.cs" />
     <Compile Include="ViewModels\IDetailedViewModelFactory.cs" />
     <Compile Include="ViewModels\IMeetingDetailViewModel.cs" />
     <Compile Include="ViewModels\INavigationViewModel.cs" />
-    <Compile Include="ViewModels\IDetailViewModel.cs" />
     <Compile Include="ViewModels\OrganizerMainViewModel.cs" />
     <Compile Include="ViewModels\NavigationItemViewModel.cs" />
     <Compile Include="ViewModels\NavigationViewModel.cs" />

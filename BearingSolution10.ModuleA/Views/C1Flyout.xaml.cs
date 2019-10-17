@@ -1,6 +1,6 @@
 ﻿using MahApps.Metro.Controls;
 using BearingSolution10.Infrastructure.Constants;
-using BearingSolution10.Infrastructure.Interfaces;
+using BearingSolution10.Infrastructure.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;

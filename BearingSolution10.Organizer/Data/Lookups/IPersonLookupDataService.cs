@@ -1,4 +1,4 @@
-﻿using BearingSolution10.Organizer.Model;
+﻿using BearingSolution10.Infrastructure.Base;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

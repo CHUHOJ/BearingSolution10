@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BearingSolution10.Styling",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BearingSolution10.Organizer", "BearingSolution10.Organizer\BearingSolution10.Organizer.csproj", "{E7410612-6C56-43A6-BEEC-644A338C2769}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BearingSolution10.WorkManager", "BearingSolution10.WorkManager\BearingSolution10.WorkManager.csproj", "{5A4B454D-759A-4152-A4A8-40AAADD52F66}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{E7410612-6C56-43A6-BEEC-644A338C2769}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7410612-6C56-43A6-BEEC-644A338C2769}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7410612-6C56-43A6-BEEC-644A338C2769}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A4B454D-759A-4152-A4A8-40AAADD52F66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A4B454D-759A-4152-A4A8-40AAADD52F66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A4B454D-759A-4152-A4A8-40AAADD52F66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A4B454D-759A-4152-A4A8-40AAADD52F66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{41AE0793-22F0-482E-B6FE-831C939EA154} = {E615B0E9-602F-4BCB-9C83-E85A29FD3639}
 		{66E3B7CB-80A6-4942-9874-98B4C50B64B2} = {E615B0E9-602F-4BCB-9C83-E85A29FD3639}
 		{E7410612-6C56-43A6-BEEC-644A338C2769} = {409AAFE5-0F10-44F5-B23C-E49C37B826D7}
+		{5A4B454D-759A-4152-A4A8-40AAADD52F66} = {409AAFE5-0F10-44F5-B23C-E49C37B826D7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {584B896E-0528-480C-A1E4-7714CC9CB4CB}

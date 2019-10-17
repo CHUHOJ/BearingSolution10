@@ -52,15 +52,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationCommands.cs" />
+    <Compile Include="Base\DetailViewModelBase.cs" />
     <Compile Include="Base\FlyoutViewModel.cs" />
     <Compile Include="Base\GenericRepository.cs" />
+    <Compile Include="Base\IDetailViewModel.cs" />
+    <Compile Include="Base\IFlyoutView.cs" />
+    <Compile Include="Base\IGenericRepository.cs" />
+    <Compile Include="Base\LookupItem.cs" />
     <Compile Include="Base\ModelWrapper.cs" />
     <Compile Include="Base\NotifyDataErrorInfoBase.cs" />
+    <Compile Include="Base\NullLookupItem.cs" />
     <Compile Include="Base\PrismBaseModule.cs" />
     <Compile Include="Constants\FlyoutNames.cs" />
     <Compile Include="Constants\RegionNames.cs" />
-    <Compile Include="Interfaces\IFlyoutView.cs" />
-    <Compile Include="Interfaces\IGenericRepository.cs" />
+    <Compile Include="Event\AfterCollectionSavedEvent.cs" />
+    <Compile Include="Event\AfterDetailClosedEvent.cs" />
+    <Compile Include="Event\AfterDetailDeletedEvent.cs" />
+    <Compile Include="Event\AfterDetailSavedEvent.cs" />
+    <Compile Include="Event\OpenDetailViewEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

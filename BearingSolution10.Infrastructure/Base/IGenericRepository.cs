@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace BearingSolution10.Infrastructure.Interfaces
+namespace BearingSolution10.Infrastructure.Base
 {
     public interface IGenericRepository<T>
     {

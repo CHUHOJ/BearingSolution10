@@ -53,7 +53,6 @@
             <SolidColorBrush x:Key="MahApps.Metro.Brushes.ToggleSwitchButton.ThumbIndicatorCheckedBrush.Win10" Color="{DynamicResource Primary500Foreground}" />
 
             <BooleanToVisibilityConverter x:Key="booleanToVisibilityConverter" />
-            <local:BrushRoundConverter x:Key="BrushRoundConverter" />
 
             <Style x:Key="DataGridColumnStyle" TargetType="TextBlock">
                 <Style.Triggers>

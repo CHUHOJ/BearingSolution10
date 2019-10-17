@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BearingSolution10.Infrastructure.Interfaces
+namespace BearingSolution10.Infrastructure.Base
 {
     public interface IFlyoutView
     {

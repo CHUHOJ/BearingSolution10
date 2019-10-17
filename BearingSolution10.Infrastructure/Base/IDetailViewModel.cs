@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace BearingSolution10.Organizer.ViewModels
+namespace BearingSolution10.Infrastructure.Base
 {
     public interface IDetailViewModel
     {

@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Prism.Commands;
 using Prism.Events;
 using Prism.Mvvm;
 using BearingSolution10.Infrastructure.Services;
-using BearingSolution10.Organizer.Event;
+using BearingSolution10.Infrastructure.Event;
+using BearingSolution10.Infrastructure.Base;
 
 namespace BearingSolution10.Organizer.ViewModels
 {

@@ -1,6 +1,6 @@
 ﻿using Prism.Events;
 
-namespace BearingSolution10.Organizer.Event
+namespace BearingSolution10.Infrastructure.Event
 {
     public class OpenDetailViewEvent : PubSubEvent<OpenDetailViewEventArgs> { }
 

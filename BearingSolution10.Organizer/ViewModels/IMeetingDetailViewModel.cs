@@ -1,4 +1,4 @@
-﻿using System.Threading.Tasks;
+﻿using BearingSolution10.Infrastructure.Base;
 
 namespace BearingSolution10.Organizer.ViewModels
 {

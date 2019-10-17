@@ -17,9 +17,8 @@ namespace BearingSolution10.Organizer
         public void OnInitialized(IContainerProvider containerProvider)
         {
             var regionManager = containerProvider.Resolve<IRegionManager>();
-            regionManager.RegisterViewWithRegion(RegionNames.MainRegion, typeof(OrganizerMainView));
 
-            
+            regionManager.RegisterViewWithRegion(RegionNames.MainRegion, typeof(OrganizerMainView));
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)

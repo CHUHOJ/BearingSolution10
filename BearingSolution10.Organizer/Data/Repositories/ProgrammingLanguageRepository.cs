@@ -1,7 +1,8 @@
 ﻿using System.Threading.Tasks;
+using System.Data.Entity;
 using BearingSolution10.Infrastructure.Base;
 using BearingSolution10.Organizer.Model;
-using System.Data.Entity;
+
 
 namespace BearingSolution10.Organizer.Data.Repositories
 {

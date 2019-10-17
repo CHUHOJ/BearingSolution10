@@ -1,5 +1,5 @@
 ﻿
-namespace BearingSolution10.Organizer.Model
+namespace BearingSolution10.Infrastructure.Base
 {
     public class LookupItem
     {

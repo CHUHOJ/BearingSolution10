@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity.Infrastructure;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using System.Data.Entity.Infrastructure;
 using Prism.Commands;
 using Prism.Events;
 using Prism.Mvvm;
 using BearingSolution10.Infrastructure.Services;
-using BearingSolution10.Organizer.Event;
+using BearingSolution10.Infrastructure.Event;
 
-namespace BearingSolution10.Organizer.ViewModels
+
+namespace BearingSolution10.Infrastructure.Base
 {
     public abstract class DetailViewModelBase : BindableBase, IDetailViewModel
     {
