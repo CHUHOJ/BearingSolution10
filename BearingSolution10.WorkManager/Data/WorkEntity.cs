@@ -6,7 +6,7 @@ namespace BearingSolution10.WorkManager.Data
 
     public partial class WorkEntity : DbContext
     {
-        public WorkEntity(): base("WorkEntitiesV3")
+        public WorkEntity(): base("WorkManagerEntities")
         {
 
         }
